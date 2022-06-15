@@ -97,3 +97,24 @@ header{
     text-decoration: none;
 } */
 
+
+/*
+    SESSÃO - DESTAQUE
+*/
+section.destaque{
+    background-image: url('../img/banner-blindspot.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    width: 100%;
+    min-height: 600px;
+    position: absolute;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
