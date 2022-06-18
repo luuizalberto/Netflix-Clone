@@ -9,6 +9,7 @@ a{color: white;text-decoration: none;}
 
 body{
     background-color: gray;
+    overflow-x: hidden;
 }
 
 .center{
@@ -171,4 +172,41 @@ section.destaque{
     background-color: white;
     color: black;
     transform: scale(1.03);
+}
+
+/*
+    SESSÃO - VITRINE
+*/
+section.vitrine .vitrine-flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 96%;
+    margin-left: 4%;
+    position: relative;
+    z-index: 4;
+}
+
+.vitrine-single-banner{
+    width: 16.6%;
+    padding-top: 16.6%; /*serve para a altura sempre acompanhar o tamanha da largura quando a tela é redimensionada */
+    background-position: center;
+    background-size: cover;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.vitrine-single-banner:hover{
+    transform: scale(1.05);
+}
+
+@media screen and (max-width:768px){
+    section.vitrine .vitrine-flex{
+        width: 100%;
+        margin-left: 0;
+    }
+    .vitrine-single-banner{
+        width: 33.3%;
+        padding-top: 33.3%; /*serve para a altura sempre acompanhar o tamanha da largura quando a tela é redimensionada */
+    }
+    
 }
