@@ -63,15 +63,93 @@
 
     <section class="vitrine">
         <div class="vitrine-flex">
-            <div style="background-image: url('./img/banner-blindspot.jpg');" class="vitrine-single-banner"></div>
-            <div style="background-image: url('./img/stranger-f.jpg');" class="vitrine-single-banner"></div>
-            <div style="background-image: url('./img/boss-baby.jpg');" class="vitrine-single-banner"></div>
-            <div style="background-image: url('./img/daredevil.jpg');" class="vitrine-single-banner"></div>
-            <div style="background-image: url('./img/suits.jpeg');" class="vitrine-single-banner"></div>
-            <div style="background-image: url('./img/la-casa-de-papel.jpg');" class="vitrine-single-banner"></div>
-        <!--vitrine-flex-->
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/banner-blindspot.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/stranger-f.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/boss-baby.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/daredevil.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/suits.jpeg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/la-casa-de-papel.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/banner-blindspot.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/stranger-f.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/boss-baby.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/daredevil.jpg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/suits.jpeg');" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url('./img/la-casa-de-papel.jpg');" class="vitrine-wraper"></div>
+            </div>
+        </div>
+            
     </section><!--vitrine-->
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $('.vitrine-flex').slick({
+
+            dots: false,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 6,
+            slidesToScroll: 4,
+            responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }]
+
+
+
+            /*
+            dots: false,
+            arrows: false,
+            infinite: false,
+            centerMode: false,
+            speed: 1000,
+            slidesToShow: 6,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+            responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+            */            
+        });
+
+        $('.vitrine-wraper').hover(function(){
+            $(this).css('z-index','1000')
+        })
+        $('.vitrine-wraper').mouseout(function(){
+            $(this).css('z-index','0')
+        })
+    </script>
 </body>
 </html>
