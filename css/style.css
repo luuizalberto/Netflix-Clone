@@ -8,7 +8,7 @@
 a{color: white;text-decoration: none;}
 
 body{
-    background-color: gray;
+    background-color: black;
     overflow-x: hidden;
 }
 
@@ -178,8 +178,6 @@ section.destaque{
     SESSÃO - VITRINE
 */
 section.vitrine .vitrine-flex{
-    display: flex;
-    flex-wrap: wrap;
     width: 96%;
     margin-left: 4%;
     position: relative;
@@ -187,16 +185,27 @@ section.vitrine .vitrine-flex{
 }
 
 .vitrine-single-banner{
-    width: 16.6%;
-    padding-top: 16.6%; /*serve para a altura sempre acompanhar o tamanha da largura quando a tela é redimensionada */
+    width: 100%;
+    padding-top: calc(16.6% / 2);/*serve para a altura sempre acompanhar o tamanha da largura quando a tela é redimensionada */
+    float: left;
+    position: relative;
+}
+
+.vitrine-wraper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     transition: 0.4s;
     cursor: pointer;
 }
 
-.vitrine-single-banner:hover{
-    transform: scale(1.05);
+.vitrine-wraper:hover{
+    transform: scale(1.1);
 }
 
 @media screen and (max-width:768px){
@@ -204,9 +213,8 @@ section.vitrine .vitrine-flex{
         width: 100%;
         margin-left: 0;
     }
-    .vitrine-single-banner{
-        width: 33.3%;
-        padding-top: 33.3%; /*serve para a altura sempre acompanhar o tamanha da largura quando a tela é redimensionada */
-    }
+
+    .menu-header{display: none;}
+    
     
 }
